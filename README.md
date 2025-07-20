@@ -1,6 +1,3 @@
-Here’s a draft for your README.md based on your lab instructions:
-
----
 
 # K_RNN_MSCS_634_Lab_2
 
