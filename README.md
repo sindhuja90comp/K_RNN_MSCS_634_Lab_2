@@ -2,14 +2,20 @@
 # K_RNN_MSCS_634_Lab_2
 
 ## Purpose
-This lab explores the implementation and evaluation of a Recurrent Neural Network (RNN) model for a specific machine learning task, as part of the MSCS 634 course requirements.
+The purpose of this lab is to compare the performance of K-Nearest Neighbors (KNN) and Radius Neighbors (RNN) classifiers using the Wine dataset from the sklearn library.
+We analyze how different parameter values (k for KNN and radius for RNN) affect the accuracy of the models.
+The lab helps to understand how parameter tuning influences classification results and provides insights into choosing the best model for a given dataset.
 
 ## Key Insights from Accuracy Trends and Observations
-- The accuracy trends observed during the experiments provided valuable insights into the performance characteristics of RNNs.
-- Patterns in the accuracy graphs helped identify overfitting, underfitting, and the impact of different hyperparameters.
-- Iterative adjustments led to incremental improvements and a better understanding of how sequence data is handled by RNN architectures.
+- KNN Performance: Accuracy varies with the value of k. Smaller k (like 1) may overfit, while larger k values smooth predictions and may improve generalization.
+- RNN Performance: Accuracy is highly sensitive to the chosen radius. Very small or very large radius values can reduce accuracy.
+- Comparison: KNN showed more stable performance across different k values, while RNN required careful tuning of radius.
+- Observation: KNN is easier to tune and often performs better on dense datasets like the Wine dataset. RNN may be more useful for datasets with irregular spacing or varying densities.
 
 ## Challenges and Decisions
-- Selecting the right architecture and tuning hyperparameters such as learning rate, batch size, and the number of epochs required careful experimentation.
-- Managing vanishing gradients and model convergence were notable challenges.
-- Decisions around data preprocessing and model selection were driven by both accuracy metrics and the observed trends during training and validation.
+- Choosing Parameters: Selecting appropriate k values for KNN and radius values for RNN required experimentation to find the best accuracy.
+- RNN Sensitivity: RNN performance was highly affected by the radius choice; some values resulted in poor classification or no neighbors.
+- Model Comparison: We decided to use accuracy as the main metric for evaluating both models.
+- Data Splitting: An 80-20 train-test split was chosen to balance training size and evaluation reliability.
+
+
